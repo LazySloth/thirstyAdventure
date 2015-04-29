@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+
+  <title>Thirsty Monkeys</title>
+  <meta name="description" content="Thirsty Adventure">
+  <meta name="author" content="Thirsty Monkeys">
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	
+	<!-- JAVASCRIPT -->
+	
+	<script src="scripts.js"></script>
+	<script src="cookie.js"></script>
+	
+	<!-- NAVBAR -->
+	<header>
+		<h1>Thirsty Adventure</h1>
+	</header>
+	 <ul class="menu">
+		 <li><a href="#" class="active">Player 1</a></li>
+		 <li><a href="#">Player 2</a></li>
+		 <li><a href="#">Player 3</a></li>
+		 <li><a href="#">Player 4</a></li>
+		 <li class="slider"></li>
+	 </ul>
+	<!-- GAME -->
+	
+	<section>
+		<article>
+			<form action="newPlayer()">
+				<p>
+					Name : <input type="text" name="name"></input><br>
+					Refreshed : <input type="button" value="+10" onclick="modifyPlayer(0, 2, 10)"></input><br>
+					Sobriety : <input type="button" value="+10" onclick="modifyPlayer(0, 3, 10)"></input><br>
+					Mental : <input type="button" value="+10" onclick="modifyPlayer(0, 4, 10)"></input><br>
+					Deplacement : <input type="button" value="+1" onclick="modifyPlayer(0, 5, 1)"></input><br>
+					<input type="submit" value="submit"></input>
+				</p>
+			</form>
+			<p>
+				<script>
+				var tabPlayer = [["Player 1", 10, 50, 50, 50, 1], ["Player 2", 10, 50, 50, 50, 1], ["Player 3", 10, 50, 50, 50, 1], ["Player4 ", 10, 50, 50, 50, 1]];
+				// [PLAYER] = ["name", point, refreshed, sobriety, mental, deplacement]
+				document.write("<p id=\"name\">Name : " + tabPlayer[0][0] + "</p>");
+				document.write("<p id=\"point\">Point : " + tabPlayer[0][1] + "</p>");
+				document.write("<p id=\"refreshed\">Refreshed : " + tabPlayer[0][2] + "</p>");
+				document.write("<p id=\"sobriety\">Sobriety : " + tabPlayer[0][3] + "</p>");
+				document.write("<p id=\"mental\">Mental : " + tabPlayer[0][4] + "</p>");
+				document.write("<p id=\"deplacement\">Deplacement : " + tabPlayer[0][5] + "</p>");
+				</script>
+			</p>
+			<script>
+			function modifyPlayer(p, c, a) {
+			// (player, characteristic, action)
+			// p : player number
+				 // 0, 1, 2, 3, 4, ...
+			// characteristic : 
+				// 0 Name
+				// 1 Point
+				// 2 Refreshed
+				// 3 Sobriety
+				// 4 Mental
+				// 5 Deplacement
+			// a : action :
+				// if > 0 add
+				// if > 0 substract
+				// if characteristic = 1 -> new Name
+				if((tabPlayer[p][1]) > 0) {
+					switch(c) {
+						case 2:
+							tabPlayer[p][c] += a;
+							tabPlayer[p][1] --;
+							document.getElementById("refreshed").innerHTML = tabPlayer[p][c];
+							document.getElementById("point").innerHTML = tabPlayer[p][1];
+							break;
+						case 3:
+							tabPlayer[p][c] += a;
+							tabPlayer[p][1] --;
+							document.getElementById("sobriety").innerHTML = tabPlayer[p][c];
+							document.getElementById("point").innerHTML = tabPlayer[p][1];
+							break;
+						case 4:
+							tabPlayer[p][c] += a;
+							tabPlayer[p][1] --;
+							document.getElementById("mental").innerHTML = tabPlayer[p][c];
+							document.getElementById("point").innerHTML = tabPlayer[p][1];
+							break;
+						case 5:
+							tabPlayer[p][c] += a;
+							tabPlayer[p][1] --;
+							document.getElementById("deplacement").innerHTML = tabPlayer[p][c];
+							document.getElementById("point").innerHTML = tabPlayer[p][1];
+							break;
+					}
+				}
+			}
+			</script>
+		</article>
+		<article>
+			<table>
+				<script src="tableInit.js"></script>
+			</table>
+		  </article>
+	</section>
+ 	<footer>
+ 		
+ 	</footer>
+</body>
+</html>

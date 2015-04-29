@@ -1,0 +1,103 @@
+.triangle1 {
+	border-left : solid black 25px;
+	border-bottom : solid black 25px;
+	border-right : solid gray 25px;
+	border-top : solid gray 25px;
+	width: 0px;
+	height: 0px;
+	transform:rotate(45deg);
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+.triangle2 {
+	border-left : solid yellow 25px;
+	border-bottom : solid yellow 25px;
+	border-right : solid red 25px;
+	border-top : solid red 25px;
+	width: 0px;
+	height: 0px;
+	transform:rotate(45deg);
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+.triangle3 {
+	border-left : solid green 25px;
+	border-bottom : solid green 25px;
+	border-right : solid darkgreen 25px;
+	border-top : solid darkgreen 25px;
+	width: 0px;
+	height: 0px;
+	transform:rotate(45deg);
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+.triangle4 {
+	border-left : solid orange 25px;
+	border-bottom : solid orange 25px;
+	border-right : solid white 25px;
+	border-top : solid white 25px;
+	width: 0px;
+	height: 0px;
+	transform:rotate(45deg);
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+.triangle5 {
+	border-left : solid pink 25px;
+	border-bottom : solid pink 25px;
+	border-right : solid indigo 25px;
+	border-top : solid indigo 25px;
+	width: 0px;
+	height: 0px;
+	transform:rotate(45deg);
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+.triangle6 {
+	border-left : solid blue 25px;
+	border-bottom : solid blue 25px;
+	border-right : solid darkred 25px;
+	border-top : solid darkred 25px;
+	width: 0px;
+	height: 0px;
+	transform:rotate(45deg);
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+#row1 {
+	position: relative;
+	display: block;
+	top: 0px;
+	left: 0px;
+}
+
+#row2 {
+	position: absolute;
+	display: block;
+	top: 43px;
+	left: 43px;
+}
